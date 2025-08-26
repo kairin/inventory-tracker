@@ -51,13 +51,19 @@ python3 run.py
 ### Alternative: Manual Setup
 If the automatic setup doesn't work:
 ```bash
+# Using uv (recommended)
+uv sync
+uv run inventory_tracker.py
+
+# Or using traditional pip (if needed)
 pip install -r requirements.txt
 python3 inventory_tracker.py
 ```
 
 ### What You Need
-- Python 3.8 or newer
+- Python 3.10 or newer (required for docling AI processing)
 - Internet connection (for installing dependencies)
+- uv will be auto-installed if missing
 
 ## 📱 How to Use (Step-by-Step)
 
@@ -156,9 +162,10 @@ cp inventory.json backups/inventory_$(date +%Y%m%d).json
 ## 🆘 Help! Something's Not Working
 
 ### "App won't start"
-1. **Check Python version**: Run `python3 --version` (need 3.8+)
-2. **Try manual setup**: Run `pip install -r requirements.txt` then `python3 inventory_tracker.py`
+1. **Check Python version**: Run `python3 --version` (need 3.10+)
+2. **Try manual setup**: Run `uv sync` then `uv run inventory_tracker.py`
 3. **Check you're in the right folder**: Make sure you're in the `inventory-tracker` directory
+4. **Large download**: First run may take 5-10 minutes to download AI dependencies
 
 ### "Can't process images"
 1. **Check the image exists**: Make sure your photo is in the `images/` folder

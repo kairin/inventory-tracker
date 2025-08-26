@@ -1,0 +1,17 @@
+[project]
+name = "inventory-tracker"
+version = "0.1.0"
+description = "Simple inventory management with barcode scanning and image verification"
+dependencies = [
+    "textual>=0.45.0",
+    "rich>=13.0.0",
+    "docling>=1.0.0",
+    "pillow>=10.0.0",
+    "opencv-python>=4.8.0",
+    "numpy>=1.24.0",
+]
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
